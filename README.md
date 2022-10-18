@@ -1,2 +1,4 @@
 # Algorithm
-Algorithm
+
+write...
+...ing
