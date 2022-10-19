@@ -1,4 +1,3 @@
 # Algorithm
 
-write...
-...ing
+# 📝 Commit Rule
