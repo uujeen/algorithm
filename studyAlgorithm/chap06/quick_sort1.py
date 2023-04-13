@@ -1,7 +1,6 @@
 from typing import MutableSequence
 
 def qsort(a: MutableSequence, left, right) -> None:
-    n = len(a)
     pl = left
     pr = right
     x = a[(left+right) // 2]
