@@ -17,7 +17,17 @@ def binary_search(a, key):
         if left > right:
             break
     return -1
-    
+
+def binary_search_recur(a, key, left, right):
+    center = (left + right) // 2
+    if a[center] == key:
+        return center
+    elif a[center] > key:
+        binary_search_recur(a, key, left, center - 1)
+    else:
+        binary_search_recur(a, key, center + 1, right)
+
+
 def merge_sort(a, left, center, right):
     i = left
     k = 0
