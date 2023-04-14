@@ -1,6 +1,9 @@
 from typing import Any, Sequence
 import random
-
+"""
+이미 오름차순으로 정렬된 리스트에 사용 가능
+정렬되지 않은 리스트일 경우 선형탐색 (linear_search) 사용
+"""
 def binary_search(a, key):
     left = 0
     right = len(a) - 1
