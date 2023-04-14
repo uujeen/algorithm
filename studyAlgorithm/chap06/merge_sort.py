@@ -1,6 +1,42 @@
 from typing import MutableSequence
 import random
+def my_merge(a, left, center, right):
 
+    i = left
+    k = 0
+    j = center + 1
+    temp = []
+    
+    while i <= center and j <= right:
+        if a[i] < a[j]:
+            temp.append(a[i])
+            i += 1
+
+        else:
+            temp.append(a[j])
+            j += 1
+    
+    while i <= center:
+        temp.append(a[i])
+        i += 1
+    
+    while j <= right:
+        temp.append(a[j])
+        j += 1
+    
+    for k in range(left, right + 1):
+        a[k] = temp[k-left]
+
+    return a
+
+def my_merge_sort(a, left, right):
+    center = (left + right) // 2
+    if left < right:    
+        my_merge_sort(a, left, center)
+        my_merge_sort(a, center+1, right)
+        my_merge(a, left, center, right)
+
+"""
 def merge_sort(a: MutableSequence) -> None:
 
 
@@ -39,43 +75,7 @@ def merge_sort(a: MutableSequence) -> None:
     buff = [None] * n
     _merge_sort(a, 0, n - 1)
     del buff
-
-
-def my_merge(a, left, center, right):
-
-    i = left
-    k = 0
-    j = center + 1
-    temp = []
-    
-    while i <= center and j <= right:
-        if a[i] < a[j]:
-            temp.append(a[i])
-            i += 1
-
-        else:
-            temp.append(a[j])
-            j += 1
-    
-    while i <= center:
-        temp.append(a[i])
-        i += 1
-    
-    while j <= right:
-        temp.append(a[j])
-        j += 1
-    
-    for k in range(left, right + 1):
-        a[k] = temp[k-left]
-
-    return a
-
-def my_merge_sort(a, left, right):
-    center = (left + right) // 2
-    if left < right:    
-        my_merge_sort(a, left, center)
-        my_merge_sort(a, center+1, right)
-        my_merge(a, left, center, right)
+"""
 
 
 if __name__ == '__main__':
