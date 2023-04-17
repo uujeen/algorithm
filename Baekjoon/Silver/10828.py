@@ -1,6 +1,6 @@
 import sys
 
-class Stack():
+class Stack:
     
     def __init__(self):
         self.items = []
@@ -38,7 +38,7 @@ for _ in range(N):
     elif order[0] == 'pop':
         print(s.pop())
     elif order[0] == 'size':
-        print(s.len())
+        print(len(s))
     elif order[0] == 'empty':
         print(s.empty())
     else:
