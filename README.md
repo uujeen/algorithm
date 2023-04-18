@@ -4,4 +4,4 @@ studyAlgorithm의 폴더는 "자료구조와 함께 배우는 알고리즘 입�
 
 # 📝 commit rule
 
-> 📌 ex) studyAlgorithm -> [STY][Chap][Title], Programmers -> [PRO][Lv][Title], Baekjoon -> [BKJ][Lv][Title]
+> 📌 ex) studyAlgorithm -> [STY][Chap][Title], Programmers -> [PRO][Lv][Title], Baekjoon -> [BOJ][Lv][Title]
