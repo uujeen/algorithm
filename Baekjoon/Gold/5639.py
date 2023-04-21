@@ -14,14 +14,14 @@ def binary_search_tree(tree):
     sub_left = []
     sub_right = []
     if tree:
-        parent = tree.pop(0)
+        root = tree.pop(0)
         for node in tree:
-            if node < parent:
+            if node < root:
                 sub_left.append(node)
             else:
                 sub_right.append(node)                
         binary_search_tree(sub_left)
         binary_search_tree(sub_right)
-        print(parent)
+        print(root)
 
 binary_search_tree(pre_tree)
