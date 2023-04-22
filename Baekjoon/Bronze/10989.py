@@ -1,25 +1,13 @@
 import sys
 """ 10989번 : 수 정렬하기3 """
 
-def fsort(a, max_a):
-    n = len(a)
-    f = [0] * (max_a+1)
-    b = [0] * n
+n = int(sys.stdin.readline())
+num_list = [0] * 10001
 
-    for i in range(n): f[a[i]] += 1
-    for i in range(1, max_a + 1): f[i] += f[i - 1]
-    for i in range(n - 1, -1, -1): f[a[i]] -= 1; b[f[a[i]]] = a[i]
-    for i in range(n): a[i] = b[i]
+for _ in range(n):
+    num_list[int(sys.stdin.readline())] += 1
 
-def counting_sort(a):
-    fsort(a, max(a))
-
-if __name__ == '__main__':
-    n = int(sys.stdin.readline())
-    x = [None] * n
-    for i in range(n):
-        x[i] = int(sys.stdin.readline())
-
-    counting_sort(x)
-    for i in range(len(x)):
-        print(x[i])
+for i in range(10001):
+    if num_list[i] != 0:
+        for j in range(num_list[i]):
+            print(i)
