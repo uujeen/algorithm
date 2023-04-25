@@ -1,4 +1,3 @@
-# kruskal 알고리즘
 import sys
 import heapq
 """ 1197번: 최소 스패닝 트리"""
@@ -39,7 +38,7 @@ class Prim:
     def __init__(self, v, e, edge_list):
         self.v = v
         self.e = e
-        self.vertex_list = [[] for _ in range(self.v + 1)] # 해당 정점에 연결된 정점들의 집합
+        self.vertex_list = [[] for _ in range(v + 1)] # 해당 정점에 연결된 정점들의 집합
         self.make_vertex_set(edge_list)
         self.visited = [False] * (v + 1) # 해당 정점의 방문 여부
         self.heap = [[0, 1]] # [weight, 현재 정점]
