@@ -31,3 +31,16 @@ for k in range(t):
     answer[k] = dp[-1]
 for i in range(t):
     print(answer[i])
+
+""" gitID: sunghwan95 성환이형 풀이 """
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    coins = list(map(int, input().split()))
+    money = int(input())
+    dp = [0] * (money + 1)
+    dp[0] = 1
+    for coin in coins:
+        for cost in range(1, money + 1):
+            dp[cost] = dp[cost] + dp[cost - coin]
+    print(dp[-1])
