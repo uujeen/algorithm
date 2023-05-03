@@ -1,5 +1,6 @@
 import sys
 input = sys.stdin.readline
+""" 1700번: 멀티탭 스케줄링"""
 
 n, k = map(int, input().split())
 items = list(map(int, input().split()))
