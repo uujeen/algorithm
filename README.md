@@ -4,5 +4,8 @@ studyAlgorithm의 폴더는 "자료구조와 함께 배우는 알고리즘 입�
 
 # 📝 commit rule
 
-> 📌 studyAlgorithm -> [STY][Chap][Title], Programmers -> [PRO][Lv][Title][content], Baekjoon -> [BOJ][Lv][Title][content] <br>
+> 📌 studyAlgorithm -> ✅[STY][Chap][Title], Programmers -> 🚩[PRO][Lv][Title][content], Baekjoon -> [BOJ][Lv][Title][content] <br>
 > ex) [BOJ][SV4][12279][heapq]
+
+## gitmoji
+✅ : Solved, 🚩 : Couldn't solve
