@@ -1,28 +1,28 @@
 let input = require('fs')
 .readFileSync(__dirname + '/input.txt', {encoding: 'utf-8'})
 .split('\n');
-let answer = input[0].split('\n');
+let answer = input[0].split('');
+let temp = [];
 let n = Number(input[1]);
 let order, literal;
-let len = answer.length;
-let cursor = len;
 for(let i = 2; i < n + 2; i++) {
     [order , literal] = input[i].split(' ');
     if(order === 'L') {
-        if(cursor>0) {
-            cursor--;
+        if(answer.length > 0) {
+            temp.push(answer.pop());
         }
     }
     else if(order === 'D') {
-        if(cursor < len) {
-            cursor++;
+        if(temp.length > 0) {
+            answer.push(temp.pop());
         }
     }
     else if(order === 'B') {
-        answer[cursor] = '';
+        answer.pop();
     }
     else {
-        answer[cursor] += literal;
+        answer.push(literal);
     }
 }
+answer = answer.join('') + temp.reverse().join('');
 console.log(answer);

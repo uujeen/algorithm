@@ -1,11 +1,12 @@
-abc
-9
+dmiqn
+10
+P m
+P n
+D
+D
 L
 L
-L
-L
-L
-P x
-L
-B
-P y
+P a
+P s
+D
+D
