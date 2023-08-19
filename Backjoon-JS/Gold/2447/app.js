@@ -11,7 +11,7 @@ const Star = (i, j, max) => {
     if (max === 1) {
       arr.push('*');
     } else {
-      Star(parseInt(i / 3), parseInt(j / 3), parseInt(max / 3));
+      Star(parseInt(i / 3), parseInt(j / 3), max / 3);
     }
   }
 };
